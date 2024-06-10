@@ -18,7 +18,7 @@ function App() {
           <button className= "open-button" onClick={hide}>
             Search
           </button>
-          <FilterButton isShowing={isModalOpen} hide={hide}/>
+          {isModalOpen ? <FilterButton hide={hide}/> : null }
         </div>
       </div>
     </div>
