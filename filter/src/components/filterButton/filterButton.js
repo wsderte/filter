@@ -1,4 +1,5 @@
 import React, {useRef, useEffect, useState, useMemo} from 'react'
+import { IoIosSearch } from "react-icons/io";
 import "./filterButton.css"
 
 export const FilterButton = ({ isShowing, hide }) =>  {
@@ -32,12 +33,13 @@ export const FilterButton = ({ isShowing, hide }) =>  {
     return (
         <div className='filter-wrap'>
             <div className='filter-input-box'>
+                    <IoIosSearch size={16} />
                     <input 
                         value={query}
                         onChange={e => setQuery(e.target.value)}
                         ref={ filterRef } 
                         type="text" 
-                        placeholder="Filter quotes" 
+                        placeholder="Search..." 
                         className='filter-input'
                     />
             </div>
